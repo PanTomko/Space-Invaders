@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/77087__huvaakoodia__laser-short.wav-4835a0192ffa4defb1f8ce00135b8945.sample"
+
+[deps]
+
+source_file="res://Sounds/lazers/77087__huvaakoodia__laser-short.wav"
+source_md5="1ae6f75f89a0330d1c489905e879de0d"
+
+dest_files=[ "res://.import/77087__huvaakoodia__laser-short.wav-4835a0192ffa4defb1f8ce00135b8945.sample" ]
+dest_md5="5bd7c218c6868ba56b8ed7d46cf4e935"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

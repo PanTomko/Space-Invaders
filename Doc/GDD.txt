@@ -1,0 +1,53 @@
+
+
+
+
+TODO :
+
+*********** "Combat and Monsters" **********************************************
+ 
+- [ DONE ] end patern #2 for boss
+- [] add sound of shoot for aliens 1, 2
+- [] add sound of death for aliens 1, 2, 3
+
+*********** "Doc" **************************************************************
+
+- [] edit description on how stage #2 of boss works
+
+*********** "Game States" ******************************************************
+
+- [] add win screan
+- [] add how to play screan
+
+*********** "Art" **************************************************************
+
+- [] update icons graphic of power ups 
+
+
+
+
+
+       ######################### "Boss" #########################
+Boss battle is last encourege in game. Killing him will be a wining statment. 
+Fight will be divaided in 3 stages.
+
+Stage #1 ( 100% - 50% ) life
+- boss swing back and forth in wavy maner ( sqer function ), if u get to haigh 
+  he will tick to one of wall sides.
+
+Stage #2 ( 50% - 25% ) life
+- boss will folow player for 2 sec then stop movin and start shooting many 
+  boolets at once in down direction. After this he will back to moving like in 
+  "Stage #1".
+
+Stage #3 ( 25% - 0% ) life
+- Boss will for 10sec, stop in random spot form movmet patwern of "Stage #1". 
+  After taking place he is gonna folow face direction of player. after 1sec he 
+  will stop and shoot lazer with 0.5 delae.
+  
+  
+  
+  
+  
+  
+  

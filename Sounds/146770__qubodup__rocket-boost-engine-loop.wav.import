@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/146770__qubodup__rocket-boost-engine-loop.wav-3d71f5069099b0331122cd7d07aa17b4.sample"
+
+[deps]
+
+source_file="res://Sounds/146770__qubodup__rocket-boost-engine-loop.wav"
+source_md5="3aca27e668bf063bd0a489069b353d39"
+
+dest_files=[ "res://.import/146770__qubodup__rocket-boost-engine-loop.wav-3d71f5069099b0331122cd7d07aa17b4.sample" ]
+dest_md5="d840b5d85c6b7be5c0a98ec7f6bc5d3e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

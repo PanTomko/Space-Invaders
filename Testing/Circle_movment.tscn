@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Graphic/Bullet_1.png" type="Texture" id=1]
+[ext_resource path="res://Sprite.gd" type="Script" id=2]
+[ext_resource path="res://Testing/Styczna.gd" type="Script" id=3]
+[ext_resource path="res://Graphic/Bullet_01.png" type="Texture" id=4]
+
+[node name="Movment" type="Node" index="0"]
+
+[node name="Koło" type="Sprite" parent="." index="0"]
+
+rotation = 0.0454351
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Styczna" type="Node2D" parent="." index="1"]
+
+position = Vector2( 434.446, 233.638 )
+scale = Vector2( 24.9418, 1 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bullet_01" type="Sprite" parent="Styczna" index="0"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+

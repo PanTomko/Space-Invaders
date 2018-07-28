@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Spawner.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 600, 0 )
+}
+
+[node name="Spawner" type="Path2D"]
+
+position = Vector2( 0, -110 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+at_pack = 7
+
+[node name="SpawnLocation" type="PathFollow2D" parent="." index="0"]
+
+position = Vector2( 300.177, 0 )
+offset = 299.603
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = false
+loop = false
+lookahead = 4.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="AliensBullets" type="Node" parent="." index="1"]
+
+[node name="Aliens" type="Node" parent="." index="2"]
+
+[node name="SpawnTime" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="TNextWave" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.3
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="SpawnTime" to="." method="_on_SpawnTime_timeout"]
+
+[connection signal="timeout" from="TNextWave" to="." method="_on_TNextWave_timeout"]
+
+

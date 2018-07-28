@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Enemy/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphic/Boss/Boss_gun.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/laser-soundr.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/Enemy/Gun_rec_gun.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Bullets/Bullet_rec_1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sounds/explosion_1.wav" type="AudioStream" id=6]
+[ext_resource path="res://SFX/Boom.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.0151, 7.59769 )
+
+[node name="Rec_gun" instance=ExtResource( 1 )]
+
+tell_if_dmg_taken = true
+positioning = false
+max_live = 30
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, -5.83333 )
+shape = SubResource( 1 )
+
+[node name="Shoot_audio" type="AudioStreamPlayer2D" parent="." index="3"]
+
+scale = Vector2( 0.833333, 0.833333 )
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Lelz"
+area_mask = 1
+
+[node name="Gun_rec_gun" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+script = ExtResource( 4 )
+bullet = ExtResource( 5 )
+
+[node name="Shoot_time_1" type="Timer" parent="Gun_rec_gun" index="0"]
+
+process_mode = 1
+wait_time = 0.7
+one_shot = false
+autostart = true
+
+[node name="DeathSound" parent="." index="5"]
+
+stream = ExtResource( 6 )
+
+[node name="Boom" parent="." index="7" instance=ExtResource( 7 )]
+
+[connection signal="on_death" from="." to="Boom" method="boom"]
+
+[connection signal="timeout" from="Gun_rec_gun/Shoot_time_1" to="Gun_rec_gun" method="_on_Shoot_time_1_timeout"]
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/7406__room__fx-flyby.wav-0dec57e3c6063c2d1795c830f5bdda6d.sample"
+
+[deps]
+
+source_file="res://Sounds/7406__room__fx-flyby.wav"
+source_md5="b66da7282470fa60e8b0d63bd2ce335d"
+
+dest_files=[ "res://.import/7406__room__fx-flyby.wav-0dec57e3c6063c2d1795c830f5bdda6d.sample" ]
+dest_md5="d114ccce9c062f1664a43cdb18c46063"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Bullets/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Graphic/Bullet_01.png" type="Texture" id=2]
+[ext_resource path="res://Graphic/light.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Bullets/new_particlesmaterial.tres" type="Material" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 1.5608, 3.08535 )
+
+[node name="Bullet" type="Area2D" groups=[
+"bullet",
+]]
+
+show_behind_parent = true
+light_mask = 2
+scale = Vector2( 1.33719, 1.68246 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+speed = 1200
+damage = 1
+side = 0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+show_behind_parent = true
+light_mask = 2
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Offset", "Visibility", "Z Index" ]
+
+[node name="Light2D" type="Light2D" parent="." index="1"]
+
+position = Vector2( -0.0441408, 0.0494642 )
+scale = Vector2( 0.20646, 0.20646 )
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 0.578125, 0.990112, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="LiveTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+
+visible = false
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Particles2D" type="Particles2D" parent="." index="4"]
+
+emitting = false
+amount = 30
+lifetime = 1.0
+one_shot = true
+preprocess = 0.0
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = ExtResource( 4 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material", "Time" ]
+
+[connection signal="area_entered" from="." to="." method="_on_Bullet_area_entered"]
+
+[connection signal="timeout" from="LiveTimer" to="." method="_on_LiveTimer_timeout"]
+
+

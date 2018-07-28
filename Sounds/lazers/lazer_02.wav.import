@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lazer_02.wav-d7f9ec6ae9d081df299faec0ce608429.sample"
+
+[deps]
+
+source_file="res://Sounds/lazers/lazer_02.wav"
+source_md5="dbff79571c0b23ebc375894e72fd58bc"
+
+dest_files=[ "res://.import/lazer_02.wav-d7f9ec6ae9d081df299faec0ce608429.sample" ]
+dest_md5="123a18bb53f7d7ab66e9df653524fff8"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

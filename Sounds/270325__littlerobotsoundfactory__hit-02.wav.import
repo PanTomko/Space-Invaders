@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/270325__littlerobotsoundfactory__hit-02.wav-cfff6c9872fac2dfbf2b370426b9a1b0.sample"
+
+[deps]
+
+source_file="res://Sounds/270325__littlerobotsoundfactory__hit-02.wav"
+source_md5="f499fc89edc4426ed4167ae6c87fb997"
+
+dest_files=[ "res://.import/270325__littlerobotsoundfactory__hit-02.wav-cfff6c9872fac2dfbf2b370426b9a1b0.sample" ]
+dest_md5="3d90a87b5e25d702744a7a9e2d40851a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

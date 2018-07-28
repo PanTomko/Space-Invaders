@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/102584__cgeffex__synthesized-aircraft.wav-64a123bb00174a8f0232c3a6602b2507.sample"
+
+[deps]
+
+source_file="res://Sounds/102584__cgeffex__synthesized-aircraft.wav"
+source_md5="d427f4e86e6be51fa6c7071597ed27ef"
+
+dest_files=[ "res://.import/102584__cgeffex__synthesized-aircraft.wav-64a123bb00174a8f0232c3a6602b2507.sample" ]
+dest_md5="2ac6604e082518d4dcb8da7445a9d605"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

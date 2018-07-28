@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/space player_Shoot 2.png-12336b7b8d85c9142191c7e5941b2d48.stex"
+
+[deps]
+
+source_file="res://Graphic/space player_Shoot 2.png"
+source_md5="81d32e1d180c326c000817830d7230f3"
+
+dest_files=[ "res://.import/space player_Shoot 2.png-12336b7b8d85c9142191c7e5941b2d48.stex" ]
+dest_md5="ca891b62f3e90c7086236433372d91a8"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

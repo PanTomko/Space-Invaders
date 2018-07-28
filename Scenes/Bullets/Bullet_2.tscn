@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Bullets/Bullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphic/Bullet_1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Bullets/Bulletx.tres" type="Gradient" id=3]
+
+[sub_resource type="GradientTexture" id=1]
+
+flags = 4
+gradient = ExtResource( 3 )
+width = 2048
+
+[sub_resource type="ParticlesMaterial" id=2]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.6
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = -10.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 3.0
+scale_random = 0.0
+color_ramp = SubResource( 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Emission Shape", "Gravity", "Initial Velocity", "Linear Accel", "Spread", "Trail" ]
+
+[node name="Bullet_1" instance=ExtResource( 1 )]
+
+light_mask = 4
+scale = Vector2( 1, 1 )
+speed = 100
+side = 1
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="Light2D" parent="." index="1"]
+
+position = Vector2( -0.0441399, 0.0494642 )
+color = Color( 0.875, 0.38356, 0.287109, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="LiveTimer" parent="." index="2"]
+
+wait_time = 5.0
+autostart = false
+
+[node name="Particles2D" parent="." index="4"]
+
+process_material = SubResource( 2 )
+
+

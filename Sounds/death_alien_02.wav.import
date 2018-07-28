@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/death_alien_02.wav-ef290cad58476f9a03376848da1eda3f.sample"
+
+[deps]
+
+source_file="res://Sounds/death_alien_02.wav"
+source_md5="b99a36eb0003c2759f2f25559ad544c6"
+
+dest_files=[ "res://.import/death_alien_02.wav-ef290cad58476f9a03376848da1eda3f.sample" ]
+dest_md5="375ea822ddd9ce8bd1dd43e3c7f40eaf"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

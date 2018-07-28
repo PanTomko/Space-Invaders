@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Alien_standard_IS.gd" type="Script" id=1]
+
+[node name="Alien_standard_IS" type="Node"]
+
+script = ExtResource( 1 )
+speed = 200
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

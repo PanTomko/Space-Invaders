@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/165619__pishpirika__dn-kp-drmb-04.wav-d7a20e5677aa05179158fa250c153b0d.sample"
+
+[deps]
+
+source_file="res://Sounds/lazers/165619__pishpirika__dn-kp-drmb-04.wav"
+source_md5="e911796748909d8b0055f01afff2566f"
+
+dest_files=[ "res://.import/165619__pishpirika__dn-kp-drmb-04.wav-d7a20e5677aa05179158fa250c153b0d.sample" ]
+dest_md5="d87dc05070fbf1357817eb9026cb04bd"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

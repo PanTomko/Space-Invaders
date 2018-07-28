@@ -1,0 +1,263 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player/LvlUP.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player/HP.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Graphic/Background/B1.png" type="Texture" id=4]
+[ext_resource path="res://Graphic/Background/B3.png" type="Texture" id=5]
+[ext_resource path="res://Graphic/Background/B4.png" type="Texture" id=6]
+[ext_resource path="res://Graphic/Background/B5.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Enemy/Spawner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sounds/game-music.ogg" type="AudioStream" id=11]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Game_over"
+length = 4.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.505882, 0.145098, 0.145098, 0 ), Color( 0.505882, 0.145098, 0.145098, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 5.0
+loop = true
+step = 0.1
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "game_won"
+length = 4.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.154724, 0.157749, 0.203125, 0 ), Color( 0.324219, 0.366455, 1, 1 ) ]
+}
+
+[node name="Game" type="Node" index="0"]
+
+script = ExtResource( 1 )
+lvl_up_scene = ExtResource( 2 )
+hp_scene = ExtResource( 3 )
+
+[node name="ColorRect2" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -229.0
+margin_top = -285.0
+margin_right = 843.0
+margin_bottom = 1040.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+
+[node name="Background" type="Node" parent="." index="1"]
+
+[node name="B1" type="Sprite" parent="Background" index="0"]
+
+position = Vector2( 300, 400 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 600, 800 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="B2" type="Sprite" parent="Background" index="1"]
+
+position = Vector2( 300, 400 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 2, 600, 800 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="B3" type="Sprite" parent="Background" index="2"]
+
+position = Vector2( 300, 400 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 600, 800 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="B4" type="Sprite" parent="Background" index="3"]
+
+position = Vector2( 300, 400 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 293.264, 600, 800 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="BoostContainer" type="Node" parent="." index="2"]
+
+[node name="BoostContainer2" type="Node" parent="." index="3"]
+
+[node name="Spawner" parent="." index="4" instance=ExtResource( 8 )]
+
+position = Vector2( 0, -190 )
+at_pack = 0
+
+[node name="Bullets" type="Node2D" parent="." index="5"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Player" parent="." index="6" instance=ExtResource( 9 )]
+
+[node name="TimerStart" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="GUI" parent="." index="8" instance=ExtResource( 10 )]
+
+[node name="AnimationGame" type="AnimationPlayer" parent="." index="9"]
+
+root_node = NodePath("..")
+autoplay = "Scroling-background"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Game_over = SubResource( 1 )
+anims/Scroling-background = SubResource( 2 )
+anims/game_won = SubResource( 3 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 11 )
+volume_db = -10.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Timer_PowerUP" type="Timer" parent="." index="11"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Timer_LvlUP" type="Timer" parent="." index="12"]
+
+process_mode = 1
+wait_time = 30.0
+one_shot = false
+autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="StartPos" type="Position2D" parent="." index="13"]
+
+position = Vector2( 310, 910 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="14"]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="ColorRect" type="ColorRect" parent="." index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 600.0
+margin_bottom = 800.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.324219, 0.366455, 1, 1 )
+
+[node name="THp" type="Timer" parent="." index="16"]
+
+process_mode = 1
+wait_time = 25.0
+one_shot = false
+autostart = true
+
+[node name="TBoost" type="Timer" parent="." index="17"]
+
+process_mode = 1
+wait_time = 15.0
+one_shot = false
+autostart = true
+
+[connection signal="game_start" from="." to="Player" method="_on_Game_game_start"]
+
+[connection signal="game_start" from="." to="Spawner" method="_on_Game_game_start"]
+
+[connection signal="A4_ded" from="Spawner" to="." method="_on_Spawner_A4_ded"]
+
+[connection signal="clear" from="Spawner" to="GUI" method="_on_Spawner_clear"]
+
+[connection signal="game_won" from="Spawner" to="." method="_on_Spawner_game_won"]
+
+[connection signal="player_ded" from="Player" to="GUI" method="_on_Player_player_ded"]
+
+[connection signal="player_ded" from="Player" to="." method="_on_Player_player_ded"]
+
+[connection signal="player_get_hit" from="Player" to="GUI" method="_on_Player_player_get_hit"]
+
+[connection signal="power_has_change" from="Player" to="GUI" method="_on_Player_power_has_change"]
+
+[connection signal="timeout" from="TimerStart" to="." method="_on_TimerStart_timeout"]
+
+[connection signal="animation_finished" from="AnimationGame" to="." method="_on_AnimationGame_animation_finished"]
+
+[connection signal="timeout" from="Timer_LvlUP" to="." method="_on_Timer_LvlUP_timeout"]
+
+[connection signal="timeout" from="THp" to="." method="_on_THp_timeout"]
+
+[connection signal="timeout" from="TBoost" to="." method="_on_TBoost_timeout"]
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/alien_damage_01.wav-c17efa7d40ac566b1c5dcb0a0f11ac54.sample"
+
+[deps]
+
+source_file="res://Sounds/alien_damage_01.wav"
+source_md5="469e1407641ab6b9a3cc202cac71ecc9"
+
+dest_files=[ "res://.import/alien_damage_01.wav-c17efa7d40ac566b1c5dcb0a0f11ac54.sample" ]
+dest_md5="3a92d77c0d139143a3b878df855224c9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

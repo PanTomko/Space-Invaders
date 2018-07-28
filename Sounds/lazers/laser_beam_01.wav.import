@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laser_beam_01.wav-fcb0597e334e5f13f994a7e34ba43722.sample"
+
+[deps]
+
+source_file="res://Sounds/lazers/laser_beam_01.wav"
+source_md5="6eb00b91c2859b1a9dd96f0586076bea"
+
+dest_files=[ "res://.import/laser_beam_01.wav-fcb0597e334e5f13f994a7e34ba43722.sample" ]
+dest_md5="ff2fe6e716aadb499440bc5d3f26e197"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

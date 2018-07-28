@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Enemy/Shake_general.gd" type="Script" id=2]
+
+[sub_resource type="AudioStreamSample" id=1]
+
+format = 0
+loop_mode = 0
+loop_begin = 0
+loop_end = 0
+mix_rate = 44100
+stereo = false
+data = PoolByteArray(  )
+
+[node name="Enemy" type="Area2D" groups=[
+"enemy",
+]]
+
+scale = Vector2( 1.2, 1.2 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+tell_if_dmg_taken = false
+positioning = true
+if_shake = false
+max_live = null
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Clear_Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = SubResource( 1 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Shake" type="Node" parent="." index="4"]
+
+script = ExtResource( 2 )
+
+[connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]
+
+[connection signal="timeout" from="Clear_Timer" to="." method="_on_Clear_Timer_timeout"]
+
+

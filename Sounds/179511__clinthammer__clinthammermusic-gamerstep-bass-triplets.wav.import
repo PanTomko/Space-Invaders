@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/179511__clinthammer__clinthammermusic-gamerstep-bass-triplets.wav-310789f4658e58d0f8fb304366207210.sample"
+
+[deps]
+
+source_file="res://Sounds/179511__clinthammer__clinthammermusic-gamerstep-bass-triplets.wav"
+source_md5="a10c3868f5186dce467285b0f28d7b88"
+
+dest_files=[ "res://.import/179511__clinthammer__clinthammermusic-gamerstep-bass-triplets.wav-310789f4658e58d0f8fb304366207210.sample" ]
+dest_md5="e52fd0c6fdc866e7b3abb31c5a2344c5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

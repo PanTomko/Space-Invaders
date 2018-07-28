@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/404796__owlstorm__retro-video-game-sfx-laser.wav-da77fcab9b822a365019a1fcf48c6495.sample"
+
+[deps]
+
+source_file="res://Sounds/lazers/404796__owlstorm__retro-video-game-sfx-laser.wav"
+source_md5="f5a19c5b73bbd39ad0e4645e7acbc290"
+
+dest_files=[ "res://.import/404796__owlstorm__retro-video-game-sfx-laser.wav-da77fcab9b822a365019a1fcf48c6495.sample" ]
+dest_md5="05a02cc6e75dbd73178aeedd9d54f049"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

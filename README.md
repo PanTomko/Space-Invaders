@@ -2,4 +2,4 @@
 Despasito 2
 
 
-![alt text](https://raw.githubusercontent.com/PanTomko/Space-Invaders/Screen-shots/begining.png)
+![Ni ma](https://github.com/PanTomko/Space-Invaders/blob/master/Screen-shots/begining.png)
